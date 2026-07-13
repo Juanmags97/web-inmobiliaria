@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áurea | Propiedades de Lujo & Plataforma Digital</title>
+    <!-- Tailwind CSS para diseño fluido y responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display para títulos elegantes y Lato para legibilidad -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#060a13',
+                            900: '#0b1120',
+                            800: '#1e293b',
+                            700: '#334155',
+                        },
+                        gold: {
+                            light: '#fde047',
+                            DEFAULT: '#d4af37',
+                            dark: '#aa841a',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Desplazamiento suave para la navegación */
+        html { scroll-behavior: smooth; }
+        /* Barra de scroll de lujo */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b1120; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #aa841a; }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans min-height-screen selection:bg-gold selection:text-navy-950 overflow-x-hidden">
+
+    <!-- NAVBAR PREMIUM -->
+    <nav class="sticky top-0 z-40 bg-navy-950/95 backdrop-blur-md border-b border-navy-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logotipo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <span class="text-2xl sm:text-3xl font-serif font-bold text-gold tracking-widest flex items-center gap-2">
+                        <i class="fa-solid fa-hotel text-gold"></i> ÁUREA
+                    </span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400 border-l border-navy-700 pl-2 hidden sm:inline">Propiedades</span>
+                </div>
+                <!-- Enlaces de navegación desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hero" class="text-sm font-semibold text-slate-300 hover:text-gold transition-colors">Inicio</a>
+                    <a href="#catalogo" class="text-sm font-semibold text-slate-300 hover:text-gold transition-colors">Propiedades</a>
+                    <a href="#calculadora" class="text-sm font-semibold text-slate-300 hover:text-gold transition-colors">Calculadora</a>
+                    <a href="#nosotros" class="text-sm font-semibold text-slate-300 hover:text-gold transition-colors">Nosotros</a>
+                    <button onclick="toggleCMSModal(true)" class="bg-navy-800 text-gold hover:bg-gold hover:text-navy-950 border border-gold/30 hover:border-gold px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders"></i> Panel CMS
+                    </button>
+                    <a href="#contacto" class="bg-gradient-to-r from-gold to-gold-dark text-navy-950 font-bold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider hover:shadow-lg hover:shadow-gold/20 transition-all duration-300">
+                        Consultar
+                    </a>
+                </div>
+                <!-- Menú móvil hamburguesa -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-gold focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-b border-navy-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block text-slate-300 hover:text-gold font-medium py-2">Inicio</a>
+            <a href="#catalogo" class="block text-slate-300 hover:text-gold font-medium py-2">Propiedades</a>
+            <a href="#calculadora" class="block text-slate-300 hover:text-gold font-medium py-2">Calculadora</a>
+            <a href="#nosotros" class="block text-slate-300 hover:text-gold font-medium py-2">Nosotros</a>
+            <div class="pt-4 flex flex-col gap-3">
+                <button onclick="toggleCMSModal(true); document.getElementById('mobile-menu').classList.add('hidden')" class="w-full text-center bg-navy-800 text-gold hover:bg-gold hover:text-navy-950 border border-gold/30 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300">
+                    <i class="fa-solid fa-sliders"></i> Abrir Panel CMS
+                </button>
+                <a href="#contacto" class="w-full text-center bg-gradient-to-r from-gold to-gold-dark text-navy-950 font-bold py-2.5 rounded-full text-xs uppercase tracking-wider block">
+                    Consultar Agencia
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION CON FONDO DE LUJO -->
+    <header id="hero" class="relative min-h-[90vh] flex items-center justify-center bg-navy-950 overflow-hidden">
+        <!-- Imagen de fondo premium con overlay oscuro degradado -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=80" alt="Residencia de lujo con piscina" class="w-full h-full object-cover opacity-35 scale-105 animate-[pulse_8s_infinite]">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center mt-12">
+            <span class="inline-block text-gold uppercase tracking-[0.3em] text-xs font-bold mb-4 bg-gold/10 px-4 py-1.5 rounded-full border border-gold/20">
+                Tu Próximo Hogar te Espera
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+                Encuentra tu lugar de <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold-dark italic">Exclusividad</span>
+            </h1>
+            <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto mb-12 font-light">
+                Descubre propiedades residenciales de diseño galardonado, ubicaciones privilegiadas y sofisticación arquitectónica sin igual.
+            </p>
+
+            <!-- BUSCADOR INTERACTIVO AVANZADO -->
+            <div class="w-full max-w-4xl mx-auto bg-navy-900/90 backdrop-blur-lg border border-navy-800 rounded-2xl p-6 shadow-2xl shadow-navy-950/50">
+                <form id="search-form" class="grid grid-cols-1 md:grid-cols-4 gap-4 text-left">
+                    <!-- Operación -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Operación</label>
+                        <div class="relative">
+                            <select id="filter-operation" class="w-full bg-navy-850 border border-navy-700 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
+                                <option value="todos">Todos</option>
+                                <option value="Venta">Venta</option>
+                                <option value="Alquiler">Alquiler</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+                        </div>
+                    </div>
+                    <!-- Tipo de Propiedad -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Tipo de Propiedad</label>
+                        <div class="relative">
+                            <select id="filter-type" class="w-full bg-navy-850 border border-navy-700 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
+                                <option value="todos">Todos los Tipos</option>
+                                <option value="Casa">Casa</option>
+                                <option value="Departamento">Departamento</option>
+                                <option value="Penthouse">Penthouse</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+                        </div>
+                    </div>
+                    <!-- Ubicación -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Ubicación</label>
+                        <div class="relative">
+                            <select id="filter-location" class="w-full bg-navy-850 border border-navy-700 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
+                                <option value="todos">Cualquier Ubicación</option>
+                                <option value="Puerto Madero">Puerto Madero</option>
+                                <option value="Palermo">Palermo</option>
+                                <option value="San Isidro">San Isidro</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+                        </div>
+                    </div>
+                    <!-- Botón de Búsqueda -->
+                    <div class="flex items-end">
+                        <button type="submit" class="w-full bg-gradient-to-r from-gold to-gold-dark text-navy-950 font-bold py-3 px-6 rounded-lg text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-gold/25 transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass"></i> Buscar Ahora
+                        </button>
+                    </div>
+                </form>
+                <!-- Ajuste extra de Precio Deslizante -->
+                <div class="mt-4 pt-4 border-t border-navy-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex-grow max-w-md">
+                        <div class="flex justify-between text-xs text-slate-400 mb-2">
+                            <span>Precio Máximo</span>
+                            <span id="price-slider-value" class="text-gold font-bold">USD 5.000.000</span>
+                        </div>
+                        <input type="range" id="filter-price-slider" min="100000" max="5000000" step="50000" value="5000000" class="w-full h-1 bg-navy-850 rounded-lg appearance-none cursor-pointer accent-gold">
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="resetFilters()" type="button" class="text-xs text-slate-400 hover:text-white transition-colors">
+                            <i class="fa-solid fa-rotate-left mr-1"></i> Reajustar Filtros
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN: CATÁLOGO DE PROPIEDADES -->
+    <section id="catalogo" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-4">
+            <div>
+                <span class="text-gold font-bold uppercase tracking-widest text-xs">Exclusividad Garantizada</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2">Nuestras Propiedades Destacadas</h2>
+            </div>
+            <div class="flex items-center gap-2 text-slate-400 text-sm">
+                <span>Resultados:</span>
+                <span id="results-count" class="bg-navy-800 text-gold px-3 py-1 rounded-full font-bold text-xs">6</span>
+            </div>
+        </div>
+
+        <!-- Efecto de carga (Spinner simulado durante la filtración) -->
+        <div id="loading-spinner" class="hidden flex-col items-center justify-center py-20">
+            <div class="w-12 h-12 border-4 border-gold border-t-transparent rounded-full animate-spin mb-4"></div>
+            <p class="text-slate-400 text-sm">Buscando las mejores opciones...</p>
+        </div>
+
+        <!-- Rejilla de tarjetas de Propiedades -->
+        <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Cargado dinámicamente mediante JS -->
+        </div>
+
+        <!-- Estado de no resultados -->
+        <div id="no-results" class="hidden text-center py-16 bg-navy-900 border border-navy-800 rounded-2xl max-w-xl mx-auto mt-8">
+            <i class="fa-regular fa-folder-open text-gold text-5xl mb-4"></i>
+            <h3 class="text-xl font-bold font-serif text-white mb-2">No se encontraron propiedades</h3>
+            <p class="text-slate-400 text-sm px-6">
+                Prueba ampliando tu rango de precio o cambiando los filtros del buscador avanzado.
+            </p>
+            <button onclick="resetFilters()" class="mt-6 bg-gold hover:bg-gold-dark text-navy-950 font-bold px-6 py-2.5 rounded-full text-xs uppercase tracking-wider transition-colors">
+                Ver Todo el Catálogo
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: SIMULADOR DE FINANCIACIÓN (MORTGAGE CALCULATOR) -->
+    <section id="calculadora" class="py-24 bg-navy-900/60 border-y border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Lado izquierdo: Información -->
+                <div>
+                    <span class="text-gold font-bold uppercase tracking-widest text-xs">Planificación Financiera</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-6">Simulador de Hipoteca Premium</h2>
+                    <p class="text-slate-300 leading-relaxed mb-6 font-light">
+                        Te ayudamos a visualizar la viabilidad financiera de tu próxima gran adquisición. Modifica el valor de la propiedad, la tasa de interés y el plazo para ver de forma instantánea la estimación mensual de tu pago hipotecario.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 bg-navy-950/60 p-6 rounded-xl border border-navy-800">
+                        <div>
+                            <div class="text-gold text-2xl font-serif font-bold" id="calc-prop-val-summary">USD 850.000</div>
+                            <div class="text-xs uppercase text-slate-400 tracking-wider mt-1">Precio Propiedad</div>
+                        </div>
+                        <div>
+                            <div class="text-gold text-2xl font-serif font-bold" id="calc-monthly-summary">USD 5.104</div>
+                            <div class="text-xs uppercase text-slate-400 tracking-wider mt-1">Cuota Estimada/Mes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lado derecho: Simulador de Controles -->
+                <div class="bg-navy-950/80 p-8 rounded-2xl border border-navy-800 shadow-xl">
+                    <h3 class="text-xl font-serif font-semibold mb-6 text-white flex items-center gap-2">
+                        <i class="fa-solid fa-calculator text-gold"></i> Ajuste Financiero
+                    </h3>
+                    <div class="space-y-6">
+                        <!-- Control: Valor Propiedad -->
+                        <div>
+                            <div class="flex justify-between text-sm text-slate-300 mb-2 font-medium">
+                                <span>Valor de la Propiedad</span>
+                                <span class="text-gold font-bold" id="calc-label-val">USD 850.000</span>
+                            </div>
+                            <input type="range" id="calc-val-input" min="100000" max="5000000" step="50000" value="850000" class="w-full h-1 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-gold">
+                        </div>
+
+                        <!-- Control: Enganche / Pago Inicial -->
+                        <div>
+                            <div class="flex justify-between text-sm text-slate-300 mb-2 font-medium">
+                                <span>Pago Inicial / Enganche (20%)</span>
+                                <span class="text-gold font-bold" id="calc-label-down">USD 170.000</span>
+                            </div>
+                            <input type="range" id="calc-down-input" min="10" max="80" step="5" value="20" class="w-full h-1 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-gold">
+                        </div>
+
+                        <!-- Control: Plazo en Años -->
+                        <div>
+                            <div class="flex justify-between text-sm text-slate-300 mb-2 font-medium">
+                                <span>Plazo del Crédito</span>
+                                <span class="text-gold font-bold" id="calc-label-years">15 Años</span>
+                            </div>
+                            <input type="range" id="calc-years-input" min="5" max="30" step="5" value="15" class="w-full h-1 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-gold">
+                        </div>
+
+                        <!-- Control: Tasa Interés Anual -->
+                        <div>
+                            <div class="flex justify-between text-sm text-slate-300 mb-2 font-medium">
+                                <span>Tasa de Interés Anual</span>
+                                <span class="text-gold font-bold" id="calc-label-rate">6.5%</span>
+                            </div>
+                            <input type="range" id="calc-rate-input" min="2" max="15" step="0.1" value="6.5" class="w-full h-1 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-gold">
+                        </div>
+                    </div>
+
+                    <!-- Resumen del Pago Calculado -->
+                    <div class="mt-8 pt-6 border-t border-navy-800 text-center">
+                        <span class="text-xs uppercase text-slate-400 tracking-widest font-bold">Pago Mensual Estimado (P+I)</span>
+                        <div class="text-4xl sm:text-5xl font-serif font-bold text-gold mt-2 animate-[pulse_3s_infinite]" id="calc-monthly-result">
+                            USD 5.104
+                        </div>
+                        <p class="text-[10px] text-slate-500 mt-2">
+                            *Esta es una simulación referencial de amortización. No incluye impuestos ni costos de escrituración.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: NOSOTROS / PROPUESTA PREMIUM -->
+    <section id="nosotros" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Lado con Imagen Elegante -->
+            <div class="relative">
+                <div class="absolute inset-0 border-2 border-gold rounded-2xl translate-x-4 translate-y-4 -z-10"></div>
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" alt="Interior moderno de lujo" class="rounded-2xl border border-navy-800 shadow-2xl w-full h-[500px] object-cover">
+                <!-- Placa de Satisfacción -->
+                <div class="absolute bottom-6 left-6 bg-navy-950/90 backdrop-blur-md border border-gold/40 p-5 rounded-xl shadow-xl max-w-xs">
+                    <span class="text-gold font-serif text-3xl font-bold block mb-1">99.4%</span>
+                    <span class="text-xs uppercase tracking-wider text-slate-300 font-bold block">Índice de satisfacción de clientes premium</span>
+                </div>
+            </div>
+
+            <!-- Lado de Texto de Confianza -->
+            <div>
+                <span class="text-gold font-bold uppercase tracking-widest text-xs">Excelencia sin límites</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-6">Expertos en Negociación Inmobiliaria Exclusiva</h2>
+                <p class="text-slate-300 font-light leading-relaxed mb-6">
+                    En Áurea, fusionamos tecnología de vanguardia y un profundo entendimiento del mercado inmobiliario premium para ofrecerte un servicio de asesoramiento con total discreción y enfoque a la rentabilidad.
+                </p>
+
+                <!-- Puntos Clave de Valor -->
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-gold/10 text-gold p-3 rounded-xl border border-gold/20 flex-shrink-0">
+                            <i class="fa-solid fa-shield-halved text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Transacciones Garantizadas</h3>
+                            <p class="text-slate-400 text-sm font-light mt-1">Asesoría jurídica especializada en todo el proceso de adquisición y transferencia patrimonial.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-gold/10 text-gold p-3 rounded-xl border border-gold/20 flex-shrink-0">
+                            <i class="fa-solid fa-map-location-dot text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Cartera Off-Market Exclusiva</h3>
+                            <p class="text-slate-400 text-sm font-light mt-1">Acceso privado a propiedades que no se listan en los canales inmobiliarios tradicionales.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-gold/10 text-gold p-3 rounded-xl border border-gold/20 flex-shrink-0">
+                            <i class="fa-solid fa-handshake-simple text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Asesores de Élite dedicados</h3>
+                            <p class="text-slate-400 text-sm font-light mt-1">Un consultor inmobiliario exclusivo te acompañará personalmente las 24 horas del día.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CONTACTO & FORMULARIO -->
+    <section id="contacto" class="py-24 bg-navy-900/40 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-gold font-bold uppercase tracking-widest text-xs">Ponte en Contacto</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2 mb-4">¿Estás listo para dar el siguiente paso?</h2>
+                <p class="text-slate-300 font-light">Completa el formulario y uno de nuestros directores asociados se comunicará contigo de manera privada.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Tarjeta de contacto general de oficina -->
+                <div class="bg-navy-950 p-8 rounded-2xl border border-navy-800 h-fit space-y-8 lg:col-span-1">
+                    <h3 class="text-xl font-serif text-white font-bold">Oficina Central</h3>
+                    
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-location-dot text-gold text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-200">Dirección</h4>
+                            <p class="text-slate-400 text-sm font-light mt-1">Av. Juana Manso 1500, Puerto Madero, Buenos Aires, Argentina</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-phone text-gold text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-200">Teléfonos de Enlace</h4>
+                            <p class="text-slate-400 text-sm font-light mt-1">+54 9 11 5555-8888</p>
+                            <p class="text-slate-400 text-sm font-light">+54 9 11 5555-8889</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-envelope text-gold text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-200">Contacto Directo</h4>
+                            <p class="text-slate-400 text-sm font-light mt-1">directorio@aureapropiedades.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario Interactivo -->
+                <div class="bg-navy-950 p-8 sm:p-10 rounded-2xl border border-navy-800 lg:col-span-2 shadow-xl">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Nombre Completo</label>
+                                <input type="text" required class="w-full bg-navy-900 border border-navy-800 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all" placeholder="Juan Pérez">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Correo Electrónico</label>
+                                <input type="email" required class="w-full bg-navy-900 border border-navy-800 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all" placeholder="juan@email.com">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">WhatsApp / Móvil</label>
+                                <input type="tel" class="w-full bg-navy-900 border border-navy-800 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all" placeholder="+54 9 11 ...">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Propiedad de Interés</label>
+                                <select class="w-full bg-navy-900 border border-navy-800 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all cursor-pointer">
+                                    <option>Pregunta General</option>
+                                    <option>Penthouse Duplex Vista Río</option>
+                                    <option>Villa Moderna Minimalista</option>
+                                    <option>Departamento Premium Puerto Madero</option>
+                                    <option>Residencia Clásica Exclusiva</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Mensaje o Requerimientos Particulares</label>
+                            <textarea rows="4" required class="w-full bg-navy-900 border border-navy-800 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all resize-none" placeholder="Cuéntanos qué estás buscando y tus horarios ideales para contacto..."></textarea>
+                        </div>
+
+                        <div class="flex items-center gap-2 text-xs text-slate-400 py-2">
+                            <input type="checkbox" required id="privacy" class="accent-gold h-4 w-4 rounded">
+                            <label for="privacy">Acepto los términos de manejo de privacidad de datos para contacto preferencial.</label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-gold to-gold-dark text-navy-950 font-bold py-4 px-6 rounded-lg text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-gold/20 transition-all duration-300">
+                            Enviar Solicitud Privada
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER PREMIUM -->
+    <footer class="bg-navy-950 border-t border-navy-800 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div>
+                <p>© 2026 Áurea Propiedades S.A. Todos los derechos reservados.</p>
+                <p class="text-xs text-slate-500 mt-1">Diseñado bajo estándares de ultra-alta velocidad y SEO Dinámico.</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="#hero" class="hover:text-gold transition-colors">Aviso Legal</a>
+                <a href="#hero" class="hover:text-gold transition-colors">Cookies</a>
+                <a href="#hero" class="hover:text-gold transition-colors">Soporte</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE DETALLE DE PROPIEDAD -->
+    <div id="detail-modal" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-md hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-navy-900 border border-navy-800 rounded-2xl max-w-4xl w-full overflow-hidden shadow-2xl relative my-8">
+            <!-- Botón Cerrar -->
+            <button onclick="toggleDetailModal(false)" class="absolute top-4 right-4 bg-navy-950/80 text-white hover:text-gold h-10 w-10 rounded-full flex items-center justify-center border border-navy-800 z-10 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <!-- Imagen Galería -->
+                <div class="relative h-[250px] md:h-full min-h-[300px]">
+                    <img id="modal-img" src="" alt="Detalle" class="w-full h-full object-cover">
+                    <span id="modal-badge-op" class="absolute top-4 left-4 bg-gold text-navy-950 font-bold px-3 py-1 rounded text-xs uppercase tracking-wider">VENTA</span>
+                </div>
+                <!-- Contenido Informativo -->
+                <div class="p-8 space-y-6 max-h-[85vh] overflow-y-auto">
+                    <div>
+                        <span id="modal-type" class="text-gold uppercase tracking-widest text-xs font-bold block mb-1">DEPARTAMENTO</span>
+                        <h3 id="modal-title" class="text-2xl sm:text-3xl font-serif font-bold text-white leading-snug">Apartamento Premium Puerto Madero</h3>
+                        <p id="modal-location" class="text-slate-400 text-sm mt-1"><i class="fa-solid fa-location-dot text-gold mr-1"></i> Puerto Madero, Buenos Aires</p>
+                    </div>
+
+                    <div id="modal-price" class="text-3xl font-serif font-bold text-gold">USD 1.250.000</div>
+
+                    <!-- Especificaciones -->
+                    <div class="grid grid-cols-4 gap-4 py-4 border-y border-navy-800 text-center">
+                        <div>
+                            <div class="text-slate-400 text-xs uppercase">Sup.</div>
+                            <div id="modal-area" class="text-white font-bold text-sm mt-1">240 m²</div>
+                        </div>
+                        <div>
+                            <div class="text-slate-400 text-xs uppercase">Hab.</div>
+                            <div id="modal-beds" class="text-white font-bold text-sm mt-1">3</div>
+                        </div>
+                        <div>
+                            <div class="text-slate-400 text-xs uppercase">Baños</div>
+                            <div id="modal-baths" class="text-white font-bold text-sm mt-1">3.5</div>
+                        </div>
+                        <div>
+                            <div class="text-slate-400 text-xs uppercase">Cochera</div>
+                            <div id="modal-garage" class="text-white font-bold text-sm mt-1">Sí</div>
+                        </div>
+                    </div>
+
+                    <!-- Descripción extendida -->
+                    <div>
+                        <h4 class="text-white font-bold text-sm uppercase mb-2">Descripción General</h4>
+                        <p id="modal-desc" class="text-slate-300 text-sm font-light leading-relaxed">
+                            Exclusiva propiedad diseñada bajo los más altos estándares de calidad internacional. Cuenta con terminaciones importadas, ventanales de doble acristalamiento, domótica integrada, calefacción por losa radiante y acceso exclusivo a amenidades premium del edificio.
+                        </p>
+                    </div>
+
+                    <!-- Mini Formulario de Contacto Directo -->
+                    <div class="bg-navy-950 p-6 rounded-xl border border-navy-800 space-y-4">
+                        <h4 class="text-white font-bold text-xs uppercase tracking-wider text-center">Me interesa esta Propiedad</h4>
+                        <form id="modal-quick-contact" class="space-y-3">
+                            <input type="text" required placeholder="Tu Nombre" class="w-full bg-navy-900 border border-navy-800 rounded-lg py-2.5 px-3 text-sm text-white focus:outline-none focus:border-gold transition-colors">
+                            <input type="email" required placeholder="Tu Email de Contacto" class="w-full bg-navy-900 border border-navy-800 rounded-lg py-2.5 px-3 text-sm text-white focus:outline-none focus:border-gold transition-colors">
+                            <button type="submit" class="w-full bg-gold hover:bg-gold-dark text-navy-950 font-bold py-2.5 px-4 rounded-lg text-xs uppercase tracking-wider transition-colors">
+                                Agendar Visita / Consultar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CMS: PANEL ADMINISTRATIVO SIMULADO (Para la propuesta Slide 4) -->
+    <div id="cms-modal" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="bg-navy-900 border border-gold/40 rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl relative">
+            <div class="bg-gradient-to-r from-gold to-gold-dark p-6 text-navy-950 flex justify-between items-center">
+                <div>
+                    <h3 class="text-xl font-serif font-bold">Consola CMS | Gestión Inteligente</h3>
+                    <p class="text-xs opacity-90">Simulador interactivo del Backend administrativo</p>
+                </div>
+                <button onclick="toggleCMSModal(false)" class="bg-navy-950/20 hover:bg-navy-950/40 text-navy-950 h-8 w-8 rounded-full flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="cms-add-form" class="p-8 space-y-4 max-h-[75vh] overflow-y-auto">
+                <p class="text-xs text-slate-400">
+                    Carga una nueva propiedad ficticia y mira cómo se renderiza automáticamente en el catálogo dinámico de la página.
+                </p>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Título de la Propiedad</label>
+                    <input type="text" id="cms-title" required class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold" placeholder="Ej. Mansión Minimalista Nordelta">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Operación</label>
+                        <select id="cms-op" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold">
+                            <option value="Venta">Venta</option>
+                            <option value="Alquiler">Alquiler</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Tipo de Propiedad</label>
+                        <select id="cms-type" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold">
+                            <option value="Casa">Casa</option>
+                            <option value="Departamento">Departamento</option>
+                            <option value="Penthouse">Penthouse</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Zona / Ubicación</label>
+                        <select id="cms-loc" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold">
+                            <option value="Palermo">Palermo</option>
+                            <option value="Puerto Madero">Puerto Madero</option>
+                            <option value="San Isidro">San Isidro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Precio (USD)</label>
+                        <input type="number" id="cms-price" required class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold" placeholder="Ej. 1350000">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Superficie (m²)</label>
+                        <input type="number" id="cms-area" required class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold" placeholder="250">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Habitaciones</label>
+                        <input type="number" id="cms-beds" required class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold" placeholder="4">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Baños</label>
+                        <input type="number" id="cms-baths" step="0.5" required class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold" placeholder="3.5">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">URL de la Imagen</label>
+                    <select id="cms-img-url" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold cursor-pointer">
+                        <option value="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80">Mansión Clásica Contemporánea</option>
+                        <option value="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80">Modern High-Rise View</option>
+                        <option value="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">Minimalist Premium Home</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Descripción Breve</label>
+                    <textarea id="cms-desc" required rows="2" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold resize-none" placeholder="Características de la propiedad..."></textarea>
+                </div>
+
+                <div class="pt-4 flex gap-4">
+                    <button type="button" onclick="loadSampleProperty()" class="flex-1 bg-navy-800 hover:bg-navy-750 text-slate-300 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors">
+                        Auto-llenar Demo
+                    </button>
+                    <button type="submit" class="flex-1 bg-gradient-to-r from-gold to-gold-dark text-navy-950 py-3 rounded-lg text-xs font-bold uppercase tracking-wider hover:shadow-lg transition-all duration-300">
+                        Cargar en Catálogo
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR DE TOAST NOTIFICATIONS (Reemplazo de alert()) -->
+    <div id="toast-container" class="fixed bottom-6 right-6 z-50 space-y-4 max-w-sm pointer-events-none"></div>
+
+    <!-- LOGICA SCRIPT INTERACTIVA -->
+    <script>
+        // --- 1. DATA INICIAL (PROPIEDADES DE LUJO) ---
+        const initialProperties = [
+            {
+                id: 1,
+                title: "Penthouse Duplex Vista Río",
+                type: "Penthouse",
+                operation: "Venta",
+                location: "Puerto Madero",
+                price: 2450000,
+                area: 320,
+                beds: 4,
+                baths: 4.5,
+                garage: "Sí",
+                img: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80",
+                desc: "Espectacular penthouse de dos plantas en el corazón de Puerto Madero. Ventanales de piso a techo con vistas panorámicas al río y la reserva. Terraza privada con jacuzzi, sistema inteligente de climatización y 3 cocheras subterráneas."
+            },
+            {
+                id: 2,
+                title: "Villa Moderna Minimalista",
+                type: "Casa",
+                operation: "Venta",
+                location: "San Isidro",
+                price: 1890000,
+                area: 450,
+                beds: 5,
+                baths: 6,
+                garage: "Sí",
+                img: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+                desc: "Proyecto arquitectónico de vanguardia rodeado de un entorno forestal único. Piscina infinita climatizada, cocina integrada con equipamiento de nivel profesional de origen italiano, y master suite con vestidor doble."
+            },
+            {
+                id: 3,
+                title: "Departamento Confort en Palermo",
+                type: "Departamento",
+                operation: "Alquiler",
+                location: "Palermo",
+                price: 3200,
+                area: 140,
+                beds: 2,
+                baths: 2.5,
+                garage: "Sí",
+                img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
+                desc: "Exclusivo semipiso con balcón aterrazado en una de las zonas más tranquilas y elegantes de Palermo. Acceso a gimnasio de última generación, seguridad privada 24 hs y piscina climatizada en terraza comunitaria."
+            },
+            {
+                id: 4,
+                title: "Residencia Clásica Exclusiva",
+                type: "Casa",
+                operation: "Venta",
+                location: "San Isidro",
+                price: 3100000,
+                area: 680,
+                beds: 6,
+                baths: 7.5,
+                garage: "Sí",
+                img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+                desc: "Una obra de arte tradicional con acabados de la máxima calidad. Cuenta con casa de huéspedes independiente, salón de cata de vinos subterráneo, biblioteca de madera maciza, piscina y amplias galerías de estilo señorial."
+            },
+            {
+                id: 5,
+                title: "Sky Apartment High-Rise",
+                type: "Departamento",
+                operation: "Alquiler",
+                location: "Puerto Madero",
+                price: 4900,
+                area: 190,
+                beds: 3,
+                baths: 3,
+                garage: "Sí",
+                img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+                desc: "Excepcional unidad a gran altura con acabados de ultra lujo en torre emblemática. Pisos de mármol de Carrara, grifería de alta gama, cocina alemana integrada y un sistema domótico de última generación que controla luces, persianas y audio."
+            },
+            {
+                id: 6,
+                title: "Modern Minimalist Home",
+                type: "Casa",
+                operation: "Venta",
+                location: "Palermo",
+                price: 1150000,
+                area: 280,
+                beds: 3,
+                baths: 3.5,
+                garage: "Sí",
+                img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+                desc: "Propiedad urbana de diseño contemporáneo que prioriza el ingreso de luz natural y la armonía de materiales rústicos como el hormigón visto y la madera de ingeniería. Cuenta con patio interno verde y solárium privado."
+            }
+        ];
+
+        // Inicializamos del almacenamiento local o usamos las por defecto
+        let properties = JSON.parse(localStorage.getItem('aurea_properties')) || initialProperties;
+
+        // --- 2. SISTEMA DE NOTIFICACIONES (TOASTS) ---
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `flex items-center gap-3 p-4 rounded-xl border text-sm shadow-xl transition-all duration-300 transform translate-y-2 opacity-0 pointer-events-auto ${
+                type === 'success' 
+                    ? 'bg-navy-900 border-gold text-slate-100' 
+                    : 'bg-red-950 border-red-500 text-slate-100'
+            }`;
+            
+            const icon = type === 'success' 
+                ? '<i class="fa-solid fa-circle-check text-gold text-lg"></i>' 
+                : '<i class="fa-solid fa-circle-exclamation text-red-500 text-lg"></i>';
+                
+            toast.innerHTML = `
+                ${icon}
+                <div class="flex-grow">
+                    <p class="font-bold">${type === 'success' ? 'Operación Exitosa' : 'Aviso'}</p>
+                    <p class="text-xs text-slate-400 mt-0.5">${message}</p>
+                </div>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Forzamos reflow para transición
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            }, 10);
+            
+            // Auto eliminar después de 4 segundos
+            setTimeout(() => {
+                toast.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 4000);
+        }
+
+        // --- 3. RENDERING DINÁMICO DE PROPIEDADES ---
+        function formatPrice(value, op) {
+            if (op === "Alquiler") {
+                return `USD ${value.toLocaleString('es-ES')} / mes`;
+            }
+            return `USD ${value.toLocaleString('es-ES')}`;
+        }
+
+        function renderProperties(listToRender) {
+            const grid = document.getElementById('properties-grid');
+            const resultsCount = document.getElementById('results-count');
+            const noResults = document.getElementById('no-results');
+
+            grid.innerHTML = '';
+            resultsCount.textContent = listToRender.length;
+
+            if (listToRender.length === 0) {
+                noResults.classList.remove('hidden');
+                grid.classList.add('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+                grid.classList.remove('hidden');
+            }
+
+            listToRender.forEach((prop, index) => {
+                const card = document.createElement('div');
+                card.className = "bg-navy-900 border border-navy-800 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-gold/30 group";
+                
+                card.innerHTML = `
+                    <div class="relative h-[240px] overflow-hidden">
+                        <img src="${prop.img}" alt="${prop.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent"></div>
+                        <!-- Etiquetas -->
+                        <span class="absolute top-4 left-4 bg-navy-950/80 backdrop-blur-md text-gold border border-gold/30 font-bold px-3 py-1 rounded text-[10px] uppercase tracking-wider">
+                            ${prop.operation}
+                        </span>
+                        <span class="absolute top-4 right-4 bg-gold text-navy-950 font-bold px-3 py-1 rounded text-[10px] uppercase tracking-wider">
+                            Exclusivo
+                        </span>
+                        <div class="absolute bottom-4 left-4 text-xs font-bold text-slate-300">
+                            <i class="fa-solid fa-location-dot text-gold mr-1"></i> ${prop.location}
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div>
+                            <span class="text-gold text-xs uppercase tracking-widest font-bold">${prop.type}</span>
+                            <h3 class="text-xl font-serif font-bold text-white mt-1 group-hover:text-gold transition-colors truncate">${prop.title}</h3>
+                        </div>
+                        
+                        <!-- Características -->
+                        <div class="grid grid-cols-3 gap-2 py-3 border-y border-navy-800/80 text-center text-xs text-slate-400">
+                            <div class="border-r border-navy-800">
+                                <span class="block font-bold text-white text-sm">${prop.area}m²</span>
+                                Superficie
+                            </div>
+                            <div class="border-r border-navy-800">
+                                <span class="block font-bold text-white text-sm">${prop.beds} Dorms</span>
+                                Distribución
+                            </div>
+                            <div>
+                                <span class="block font-bold text-white text-sm">${prop.baths} Baños</span>
+                                Servicios
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2">
+                            <div class="text-lg font-serif font-bold text-gold">
+                                ${formatPrice(prop.price, prop.operation)}
+                            </div>
+                            <button onclick="openDetailModal(${prop.id})" class="text-xs uppercase font-bold tracking-wider text-slate-300 hover:text-gold transition-colors flex items-center gap-1.5">
+                                Ver Detalles <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // --- 4. MOTOR DE BÚSQUEDA Y FILTRADO INTERACTIVO ---
+        const searchForm = document.getElementById('search-form');
+        const operationSelect = document.getElementById('filter-operation');
+        const typeSelect = document.getElementById('filter-type');
+        const locationSelect = document.getElementById('filter-location');
+        const priceSlider = document.getElementById('filter-price-slider');
+        const priceSliderValue = document.getElementById('price-slider-value');
+
+        // Actualizar etiqueta del slider en vivo
+        priceSlider.addEventListener('input', (e) => {
+            const val = parseInt(e.target.value);
+            priceSliderValue.textContent = `USD ${val.toLocaleString('es-ES')}`;
+        });
+
+        // Filtrar al enviar el formulario
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simular carga premium
+            document.getElementById('properties-grid').classList.add('hidden');
+            document.getElementById('no-results').classList.add('hidden');
+            document.getElementById('loading-spinner').classList.remove('hidden');
+
+            setTimeout(() => {
+                document.getElementById('loading-spinner').classList.add('hidden');
+                applyFilters();
+            }, 600);
+        });
+
+        function applyFilters() {
+            const op = operationSelect.value;
+            const type = typeSelect.value;
+            const loc = locationSelect.value;
+            const maxPrice = parseInt(priceSlider.value);
+
+            const filtered = properties.filter(prop => {
+                const matchOp = (op === 'todos' || prop.operation === op);
+                const matchType = (type === 'todos' || prop.type === type);
+                const matchLoc = (loc === 'todos' || prop.location === loc);
+                const matchPrice = (prop.price <= maxPrice);
+
+                return matchOp && matchType && matchLoc && matchPrice;
+            });
+
+            renderProperties(filtered);
+        }
+
+        function resetFilters() {
+            operationSelect.value = 'todos';
+            typeSelect.value = 'todos';
+            locationSelect.value = 'todos';
+            priceSlider.value = 5000000;
+            priceSliderValue.textContent = "USD 5.000.000";
+            
+            applyFilters();
+            showToast("Filtros restablecidos al catálogo original.");
+        }
+
+        // --- 5. DETALLE DE PROPIEDAD EN MODAL INMERSIVA ---
+        function openDetailModal(id) {
+            const prop = properties.find(p => p.id === id);
+            if (!prop) return;
+
+            document.getElementById('modal-img').src = prop.img;
+            document.getElementById('modal-badge-op').textContent = prop.operation.toUpperCase();
+            document.getElementById('modal-type').textContent = prop.type.toUpperCase();
+            document.getElementById('modal-title').textContent = prop.title;
+            document.getElementById('modal-location').innerHTML = `<i class="fa-solid fa-location-dot text-gold mr-1"></i> ${prop.location}`;
+            document.getElementById('modal-price').textContent = formatPrice(prop.price, prop.operation);
+            document.getElementById('modal-area').textContent = `${prop.area} m²`;
+            document.getElementById('modal-beds').textContent = prop.beds;
+            document.getElementById('modal-baths').textContent = prop.baths;
+            document.getElementById('modal-garage').textContent = prop.garage;
+            document.getElementById('modal-desc').textContent = prop.desc;
+
+            toggleDetailModal(true);
+        }
+
+        function toggleDetailModal(show) {
+            const modal = document.getElementById('detail-modal');
+            if (show) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden'; // Detener scroll de fondo
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Cerrar modal al hacer clic en el fondo oscuro
+        document.getElementById('detail-modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('detail-modal')) {
+                toggleDetailModal(false);
+            }
+        });
+
+        // --- 6. SIMULADOR DE HIPOTECA PREMIUM ---
+        const calcValInput = document.getElementById('calc-val-input');
+        const calcDownInput = document.getElementById('calc-down-input');
+        const calcYearsInput = document.getElementById('calc-years-input');
+        const calcRateInput = document.getElementById('calc-rate-input');
+
+        function updateMortgageCalculator() {
+            const value = parseInt(calcValInput.value);
+            const downPercent = parseInt(calcDownInput.value);
+            const years = parseInt(calcYearsInput.value);
+            const rate = parseFloat(calcRateInput.value);
+
+            // Calcular enganche
+            const downPayment = value * (downPercent / 100);
+            const loanAmount = value - downPayment;
+
+            // Formulas financieras de amortización
+            const monthlyRate = (rate / 100) / 12;
+            const totalMonths = years * 12;
+            let monthlyPayment = 0;
+
+            if (monthlyRate === 0) {
+                monthlyPayment = loanAmount / totalMonths;
+            } else {
+                monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) / (Math.pow(1 + monthlyRate, totalMonths) - 1);
+            }
+
+            // Actualizar etiquetas visuales
+            document.getElementById('calc-label-val').textContent = `USD ${value.toLocaleString('es-ES')}`;
+            document.getElementById('calc-label-down').textContent = `USD ${downPayment.toLocaleString('es-ES')} (${downPercent}%)`;
+            document.getElementById('calc-label-years').textContent = `${years} Años`;
+            document.getElementById('calc-label-rate').textContent = `${rate}%`;
+
+            // Actualizar resúmenes
+            document.getElementById('calc-prop-val-summary').textContent = `USD ${value.toLocaleString('es-ES')}`;
+            
+            const formattedResult = `USD ${Math.round(monthlyPayment).toLocaleString('es-ES')}`;
+            document.getElementById('calc-monthly-summary').textContent = formattedResult;
+            document.getElementById('calc-monthly-result').textContent = formattedResult;
+        }
+
+        // Escuchadores de eventos para la calculadora hipotecaria
+        [calcValInput, calcDownInput, calcYearsInput, calcRateInput].forEach(elem => {
+            elem.addEventListener('input', updateMortgageCalculator);
+        });
+
+        // --- 7. PANEL CMS SIMULADO (Para la propuesta Slide 4) ---
+        function toggleCMSModal(show) {
+            const modal = document.getElementById('cms-modal');
+            if (show) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        // Cerrar modal al hacer clic en el fondo oscuro del CMS
+        document.getElementById('cms-modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('cms-modal')) {
+                toggleCMSModal(false);
+            }
+        });
+
+        function loadSampleProperty() {
+            document.getElementById('cms-title').value = "Mansión Forestal San Isidro";
+            document.getElementById('cms-price').value = 4200000;
+            document.getElementById('cms-area').value = 750;
+            document.getElementById('cms-beds').value = 5;
+            document.getElementById('cms-baths').value = 6;
+            document.getElementById('cms-desc').value = "Extraordinario diseño orgánico con salida directa al río, spa de nivel profesional, muelle privado y tecnología térmica sostenible.";
+            showToast("Datos de demostración cargados en el formulario del CMS.");
+        }
+
+        // Manejar el submit del nuevo listado del CMS
+        document.getElementById('cms-add-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const newProp = {
+                id: Date.now(), // ID único
+                title: document.getElementById('cms-title').value,
+                type: document.getElementById('cms-type').value,
+                operation: document.getElementById('cms-op').value,
+                location: document.getElementById('cms-loc').value,
+                price: parseInt(document.getElementById('cms-price').value),
+                area: parseInt(document.getElementById('cms-area').value),
+                beds: parseInt(document.getElementById('cms-beds').value),
+                baths: parseFloat(document.getElementById('cms-baths').value),
+                garage: "Sí",
+                img: document.getElementById('cms-img-url').value,
+                desc: document.getElementById('cms-desc').value
+            };
+
+            // Insertar al inicio de la lista
+            properties.unshift(newProp);
+            localStorage.setItem('aurea_properties', JSON.stringify(properties));
+
+            // Re-renderizar catálogo
+            applyFilters();
+            toggleCMSModal(false);
+            
+            // Notificar éxito
+            showToast(`¡Propiedad "${newProp.title}" añadida con éxito al catálogo dinámico!`);
+            
+            // Ir suavemente al catálogo
+            document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+
+            // Limpiar formulario
+            document.getElementById('cms-add-form').reset();
+        });
+
+        // --- 8. MANEJO DE ENVÍO DE FORMULARIOS DE CONTACTO ---
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showToast("¡Mensaje de consulta enviado! Tu asesor exclusivo se comunicará contigo de inmediato.");
+            document.getElementById('contact-form').reset();
+        });
+
+        document.getElementById('modal-quick-contact').addEventListener('submit', (e) => {
+            e.preventDefault();
+            toggleDetailModal(false);
+            showToast("Tu solicitud por este inmueble fue registrada. Te enviamos detalles al correo ingresado.");
+            document.getElementById('modal-quick-contact').reset();
+        });
+
+        // --- 9. MENÚ MÓVIL ---
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // --- 10. INICIALIZACIÓN AL CARGAR LA PÁGINA ---
+        window.onload = function() {
+            renderProperties(properties);
+            updateMortgageCalculator();
+        };
+    </script>
+</body>
+</html>
