@@ -126,38 +126,38 @@
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Operación</label>
                         <div class="relative">
-                            <select id="filter-operation" class="w-full bg-navy-850 border border-navy-700 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
+                            <select id="filter-operation" class="w-full bg-navy-850 border border-navy-700 rounded-lg py-3 px-4 text-sm text-navy-950 font-medium focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
                                 <option value="todos">Todos</option>
                                 <option value="Venta">Venta</option>
                                 <option value="Alquiler">Alquiler</option>
                             </select>
-                            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+                            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs pointer-events-none"></i>
                         </div>
                     </div>
                     <!-- Tipo de Propiedad -->
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Tipo de Propiedad</label>
                         <div class="relative">
-                            <select id="filter-type" class="w-full bg-navy-850 border border-navy-700 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
+                            <select id="filter-type" class="w-full bg-navy-850 border border-navy-700 rounded-lg py-3 px-4 text-sm text-navy-950 font-medium focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
                                 <option value="todos">Todos los Tipos</option>
                                 <option value="Casa">Casa</option>
                                 <option value="Departamento">Departamento</option>
                                 <option value="Penthouse">Penthouse</option>
                             </select>
-                            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+                            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs pointer-events-none"></i>
                         </div>
                     </div>
                     <!-- Ubicación -->
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Ubicación</label>
                         <div class="relative">
-                            <select id="filter-location" class="w-full bg-navy-850 border border-navy-700 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
+                            <select id="filter-location" class="w-full bg-navy-850 border border-navy-700 rounded-lg py-3 px-4 text-sm text-navy-950 font-medium focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
                                 <option value="todos">Cualquier Ubicación</option>
                                 <option value="Puerto Madero">Puerto Madero</option>
                                 <option value="Palermo">Palermo</option>
                                 <option value="San Isidro">San Isidro</option>
                             </select>
-                            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+                            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs pointer-events-none"></i>
                         </div>
                     </div>
                     <!-- Botón de Búsqueda -->
@@ -223,7 +223,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: SIMULADOR DE FINANCIACIÓN (MORTGAGE CALCULATOR) -->
+    <!-- SECCIÓN: SIMULADOR DE FINANCIACIÓN -->
     <section id="calculadora" class="py-24 bg-navy-900/60 border-y border-navy-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -304,7 +304,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: NOSOTROS / PROPUESTA PREMIUM -->
+    <!-- SECCIÓN: NOSOTROS -->
     <section id="nosotros" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <!-- Lado con Imagen Elegante -->
@@ -423,7 +423,7 @@
                             </div>
                             <div>
                                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Propiedad de Interés</label>
-                                <select class="w-full bg-navy-900 border border-navy-800 rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all cursor-pointer">
+                                <select class="w-full bg-navy-900 border border-navy-800 rounded-lg py-3 px-4 text-sm text-navy-950 font-medium focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all cursor-pointer">
                                     <option>Pregunta General</option>
                                     <option>Penthouse Duplex Vista Río</option>
                                     <option>Villa Moderna Minimalista</option>
@@ -440,7 +440,7 @@
 
                         <div class="flex items-center gap-2 text-xs text-slate-400 py-2">
                             <input type="checkbox" required id="privacy" class="accent-gold h-4 w-4 rounded">
-                            <label for="privacy">Acepto los términos de manejo de privacidad de datos para contacto preferencial.</label>
+                            <label htmlFor="privacy">Acepto los términos de manejo de privacidad de datos para contacto preferencial.</label>
                         </div>
 
                         <button type="submit" class="w-full bg-gradient-to-r from-gold to-gold-dark text-navy-950 font-bold py-4 px-6 rounded-lg text-sm uppercase tracking-wider hover:shadow-lg hover:shadow-gold/20 transition-all duration-300">
@@ -535,7 +535,7 @@
         </div>
     </div>
 
-    <!-- MODAL CMS: PANEL ADMINISTRATIVO SIMULADO (Para la propuesta Slide 4) -->
+    <!-- MODAL CMS: PANEL ADMINISTRATIVO SIMULADO -->
     <div id="cms-modal" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="bg-navy-900 border border-gold/40 rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl relative">
             <div class="bg-gradient-to-r from-gold to-gold-dark p-6 text-navy-950 flex justify-between items-center">
@@ -561,14 +561,14 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Operación</label>
-                        <select id="cms-op" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold">
+                        <select id="cms-op" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-navy-950 font-medium focus:outline-none focus:border-gold">
                             <option value="Venta">Venta</option>
                             <option value="Alquiler">Alquiler</option>
                         </select>
                     </div>
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Tipo de Propiedad</label>
-                        <select id="cms-type" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold">
+                        <select id="cms-type" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-navy-950 font-medium focus:outline-none focus:border-gold">
                             <option value="Casa">Casa</option>
                             <option value="Departamento">Departamento</option>
                             <option value="Penthouse">Penthouse</option>
@@ -579,7 +579,7 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Zona / Ubicación</label>
-                        <select id="cms-loc" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold">
+                        <select id="cms-loc" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-navy-950 font-medium focus:outline-none focus:border-gold">
                             <option value="Palermo">Palermo</option>
                             <option value="Puerto Madero">Puerto Madero</option>
                             <option value="San Isidro">San Isidro</option>
@@ -608,7 +608,7 @@
 
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">URL de la Imagen</label>
-                    <select id="cms-img-url" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-white focus:outline-none focus:border-gold cursor-pointer">
+                    <select id="cms-img-url" class="w-full bg-navy-950 border border-navy-800 rounded-lg py-2 px-3 text-sm text-navy-950 font-medium focus:outline-none focus:border-gold cursor-pointer">
                         <option value="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80">Mansión Clásica Contemporánea</option>
                         <option value="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80">Modern High-Rise View</option>
                         <option value="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">Minimalist Premium Home</option>
@@ -632,7 +632,7 @@
         </div>
     </div>
 
-    <!-- CONTENEDOR DE TOAST NOTIFICATIONS (Reemplazo de alert()) -->
+    <!-- CONTENEDOR DE TOAST NOTIFICATIONS -->
     <div id="toast-container" class="fixed bottom-6 right-6 z-50 space-y-4 max-w-sm pointer-events-none"></div>
 
     <!-- LOGICA SCRIPT INTERACTIVA -->
@@ -707,7 +707,7 @@
                 baths: 3,
                 garage: "Sí",
                 img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
-                desc: "Excepcional unidad a gran altura con acabados de ultra lujo en torre emblemática. Pisos de mármol de Carrara, grifería de alta gama, cocina alemana integrada y un sistema domótico de última generación que controla luces, persianas y audio."
+                desc: "Excepcional unidad a gran altura con acabados de ultra lujo en torre emblemática. Pisos de mármar de Carrara, grifería de alta gama, cocina alemana integrada y un sistema domótico de última generación que controla luces, persianas y audio."
             },
             {
                 id: 6,
@@ -725,7 +725,6 @@
             }
         ];
 
-        // Inicializamos del almacenamiento local o usamos las por defecto
         let properties = JSON.parse(localStorage.getItem('aurea_properties')) || initialProperties;
 
         // --- 2. SISTEMA DE NOTIFICACIONES (TOASTS) ---
@@ -752,12 +751,10 @@
             
             container.appendChild(toast);
             
-            // Forzamos reflow para transición
             setTimeout(() => {
                 toast.classList.remove('translate-y-2', 'opacity-0');
             }, 10);
             
-            // Auto eliminar después de 4 segundos
             setTimeout(() => {
                 toast.classList.add('translate-y-2', 'opacity-0');
                 setTimeout(() => {
@@ -791,7 +788,7 @@
                 grid.classList.remove('hidden');
             }
 
-            listToRender.forEach((prop, index) => {
+            listToRender.forEach((prop) => {
                 const card = document.createElement('div');
                 card.className = "bg-navy-900 border border-navy-800 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-gold/30 group";
                 
@@ -799,7 +796,6 @@
                     <div class="relative h-[240px] overflow-hidden">
                         <img src="${prop.img}" alt="${prop.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent"></div>
-                        <!-- Etiquetas -->
                         <span class="absolute top-4 left-4 bg-navy-950/80 backdrop-blur-md text-gold border border-gold/30 font-bold px-3 py-1 rounded text-[10px] uppercase tracking-wider">
                             ${prop.operation}
                         </span>
@@ -816,7 +812,6 @@
                             <h3 class="text-xl font-serif font-bold text-white mt-1 group-hover:text-gold transition-colors truncate">${prop.title}</h3>
                         </div>
                         
-                        <!-- Características -->
                         <div class="grid grid-cols-3 gap-2 py-3 border-y border-navy-800/80 text-center text-xs text-slate-400">
                             <div class="border-r border-navy-800">
                                 <span class="block font-bold text-white text-sm">${prop.area}m²</span>
@@ -854,17 +849,14 @@
         const priceSlider = document.getElementById('filter-price-slider');
         const priceSliderValue = document.getElementById('price-slider-value');
 
-        // Actualizar etiqueta del slider en vivo
         priceSlider.addEventListener('input', (e) => {
             const val = parseInt(e.target.value);
             priceSliderValue.textContent = `USD ${val.toLocaleString('es-ES')}`;
         });
 
-        // Filtrar al enviar el formulario
         searchForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Simular carga premium
             document.getElementById('properties-grid').classList.add('hidden');
             document.getElementById('no-results').classList.add('hidden');
             document.getElementById('loading-spinner').classList.remove('hidden');
@@ -929,7 +921,7 @@
             if (show) {
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
-                document.body.style.overflow = 'hidden'; // Detener scroll de fondo
+                document.body.style.overflow = 'hidden';
             } else {
                 modal.classList.add('hidden');
                 modal.classList.remove('flex');
@@ -937,7 +929,6 @@
             }
         }
 
-        // Cerrar modal al hacer clic en el fondo oscuro
         document.getElementById('detail-modal').addEventListener('click', (e) => {
             if (e.target === document.getElementById('detail-modal')) {
                 toggleDetailModal(false);
@@ -956,11 +947,9 @@
             const years = parseInt(calcYearsInput.value);
             const rate = parseFloat(calcRateInput.value);
 
-            // Calcular enganche
             const downPayment = value * (downPercent / 100);
             const loanAmount = value - downPayment;
 
-            // Formulas financieras de amortización
             const monthlyRate = (rate / 100) / 12;
             const totalMonths = years * 12;
             let monthlyPayment = 0;
@@ -971,13 +960,11 @@
                 monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) / (Math.pow(1 + monthlyRate, totalMonths) - 1);
             }
 
-            // Actualizar etiquetas visuales
             document.getElementById('calc-label-val').textContent = `USD ${value.toLocaleString('es-ES')}`;
             document.getElementById('calc-label-down').textContent = `USD ${downPayment.toLocaleString('es-ES')} (${downPercent}%)`;
             document.getElementById('calc-label-years').textContent = `${years} Años`;
             document.getElementById('calc-label-rate').textContent = `${rate}%`;
 
-            // Actualizar resúmenes
             document.getElementById('calc-prop-val-summary').textContent = `USD ${value.toLocaleString('es-ES')}`;
             
             const formattedResult = `USD ${Math.round(monthlyPayment).toLocaleString('es-ES')}`;
@@ -985,12 +972,11 @@
             document.getElementById('calc-monthly-result').textContent = formattedResult;
         }
 
-        // Escuchadores de eventos para la calculadora hipotecaria
         [calcValInput, calcDownInput, calcYearsInput, calcRateInput].forEach(elem => {
             elem.addEventListener('input', updateMortgageCalculator);
         });
 
-        // --- 7. PANEL CMS SIMULADO (Para la propuesta Slide 4) ---
+        // --- 7. PANEL CMS SIMULADO ---
         function toggleCMSModal(show) {
             const modal = document.getElementById('cms-modal');
             if (show) {
@@ -1002,7 +988,6 @@
             }
         }
 
-        // Cerrar modal al hacer clic en el fondo oscuro del CMS
         document.getElementById('cms-modal').addEventListener('click', (e) => {
             if (e.target === document.getElementById('cms-modal')) {
                 toggleCMSModal(false);
@@ -1019,12 +1004,11 @@
             showToast("Datos de demostración cargados en el formulario del CMS.");
         }
 
-        // Manejar el submit del nuevo listado del CMS
         document.getElementById('cms-add-form').addEventListener('submit', (e) => {
             e.preventDefault();
 
             const newProp = {
-                id: Date.now(), // ID único
+                id: Date.now(),
                 title: document.getElementById('cms-title').value,
                 type: document.getElementById('cms-type').value,
                 operation: document.getElementById('cms-op').value,
@@ -1038,21 +1022,14 @@
                 desc: document.getElementById('cms-desc').value
             };
 
-            // Insertar al inicio de la lista
             properties.unshift(newProp);
             localStorage.setItem('aurea_properties', JSON.stringify(properties));
 
-            // Re-renderizar catálogo
             applyFilters();
             toggleCMSModal(false);
             
-            // Notificar éxito
             showToast(`¡Propiedad "${newProp.title}" añadida con éxito al catálogo dinámico!`);
-            
-            // Ir suavemente al catálogo
             document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
-
-            // Limpiar formulario
             document.getElementById('cms-add-form').reset();
         });
 
